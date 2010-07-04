@@ -12,6 +12,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		D4381AAB11E107100062FE45 /* EBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4381AAA11E107100062FE45 /* EBLoginViewController.m */; };
+		D4381B2D11E10F170062FE45 /* ZBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = D4381B2C11E10F170062FE45 /* ZBAlert.m */; };
 		D478B81311DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */; };
 		D478B81411DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80C11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m */; };
 		D478B81511DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80E11DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m */; };
@@ -41,147 +43,147 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B89C11DD306D000E85D1 /* Three20.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20;
 		};
 		D478B8F711DD30FE000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B89C11DD306D000E85D1 /* Three20.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B91911DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90511DD3144000E85D1 /* Three20Core.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20Core.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20Core;
 		};
 		D478B91B11DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90511DD3144000E85D1 /* Three20Core.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* CoreUnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B91F11DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90811DD3144000E85D1 /* Three20Network.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20Network.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20Network;
 		};
 		D478B92111DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90811DD3144000E85D1 /* Three20Network.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B92511DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90B11DD3144000E85D1 /* Three20Style.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20Style.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20Style;
 		};
 		D478B92711DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90B11DD3144000E85D1 /* Three20Style.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B92B11DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90E11DD3144000E85D1 /* Three20UICommon.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20UICommon.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20UICommon;
 		};
 		D478B92D11DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90E11DD3144000E85D1 /* Three20UICommon.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B93111DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91111DD3144000E85D1 /* Three20UINavigator.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20UINavigator.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20UINavigator;
 		};
 		D478B93311DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91111DD3144000E85D1 /* Three20UINavigator.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B93711DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91411DD3144000E85D1 /* Three20UI.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2 /* libThree20UI.a */;
+			remoteGlobalIDString = BEF31F3A0F352DF5000DE5D2;
 			remoteInfo = Three20UI;
 		};
 		D478B93911DD3144000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91411DD3144000E85D1 /* Three20UI.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C /* UnitTests.octest */;
+			remoteGlobalIDString = EB9E6C6210B6A8F800DE563C;
 			remoteInfo = UnitTests;
 		};
 		D478B94711DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90E11DD3144000E85D1 /* Three20UICommon.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20UICommon */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20UICommon;
 		};
 		D478B94911DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90B11DD3144000E85D1 /* Three20Style.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20Style */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20Style;
 		};
 		D478B94B11DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90811DD3144000E85D1 /* Three20Network.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20Network */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20Network;
 		};
 		D478B94D11DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91111DD3144000E85D1 /* Three20UINavigator.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20UINavigator */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20UINavigator;
 		};
 		D478B94F11DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B90511DD3144000E85D1 /* Three20Core.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20Core */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20Core;
 		};
 		D478B95111DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B91411DD3144000E85D1 /* Three20UI.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20UI */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20UI;
 		};
 		D478B95311DD31F9000E85D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D478B89C11DD306D000E85D1 /* Three20.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BEF31F390F352DF5000DE5D2 /* Three20 */;
+			remoteGlobalIDString = BEF31F390F352DF5000DE5D2;
 			remoteInfo = Three20;
 		};
 /* End PBXContainerItemProxy section */
@@ -196,6 +198,12 @@
 		28A0AAE50D9B0CCF005BE974 /* ExplosiveBanana_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplosiveBanana_Prefix.pch; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ExplosiveBanana-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ExplosiveBanana-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D4381AA911E107100062FE45 /* EBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBLoginViewController.h; sourceTree = "<group>"; };
+		D4381AAA11E107100062FE45 /* EBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBLoginViewController.m; sourceTree = "<group>"; };
+		D4381AF411E10AD10062FE45 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = SOURCE_ROOT; };
+		D4381B2B11E10F170062FE45 /* ZBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBAlert.h; path = ExternalLibraries/ZBExtensions/ZBAlert.h; sourceTree = "<group>"; };
+		D4381B2C11E10F170062FE45 /* ZBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBAlert.m; path = ExternalLibraries/ZBExtensions/ZBAlert.m; sourceTree = "<group>"; };
+		D4381B2E11E10F3B0062FE45 /* ZBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBExtensions.h; path = ExternalLibraries/ZBExtensions/ZBExtensions.h; sourceTree = "<group>"; };
 		D478B80911DD2E3E000E85D1 /* NSArray+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+BSJSONAdditions.m"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		D478B80B11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSDictionary+BSJSONAdditions.h"; sourceTree = "<group>"; };
@@ -259,8 +267,11 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D4381AF411E10AD10062FE45 /* API.h */,
 				1D3623240D0F684500981E51 /* EBAppDelegate.h */,
 				1D3623250D0F684500981E51 /* EBAppDelegate.m */,
+				D4381AA911E107100062FE45 /* EBLoginViewController.h */,
+				D4381AAA11E107100062FE45 /* EBLoginViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -318,6 +329,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D4381B2411E10E740062FE45 /* ZBExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D4381B2E11E10F3B0062FE45 /* ZBExtensions.h */,
+				D4381B2B11E10F170062FE45 /* ZBAlert.h */,
+				D4381B2C11E10F170062FE45 /* ZBAlert.m */,
+			);
+			name = ZBExtensions;
+			sourceTree = "<group>";
+		};
 		D478B7F911DD2E13000E85D1 /* External Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +352,7 @@
 				D478B87711DD2F59000E85D1 /* Objective Plurk */,
 				D478B81E11DD2E5D000E85D1 /* LFWebAPI */,
 				D478B80811DD2E3E000E85D1 /* bsjsonadditions */,
+				D4381B2411E10E740062FE45 /* ZBExtensions */,
 			);
 			name = "External Libraries";
 			sourceTree = "<group>";
@@ -650,6 +672,8 @@
 				D478B82911DD2E67000E85D1 /* NSData+LFHTTPFormExtensions.m in Sources */,
 				D478B87C11DD2F59000E85D1 /* ObjectivePlurk.m in Sources */,
 				D478B87D11DD2F59000E85D1 /* ObjectivePlurk+PrivateMethods.m in Sources */,
+				D4381AAB11E107100062FE45 /* EBLoginViewController.m in Sources */,
+				D4381B2D11E10F170062FE45 /* ZBAlert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

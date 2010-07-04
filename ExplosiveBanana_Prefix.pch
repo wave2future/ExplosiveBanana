@@ -11,4 +11,8 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+	#import "Three20/Three20.h"
+	#import "ZBExtensions.h"
+	#import "ObjectivePlurk.h"
+	#import "API.h"
 #endif
