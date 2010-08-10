@@ -24,6 +24,16 @@
 #pragma mark -
 #pragma mark UIViewContoller Methods
 
+- (void)loadView 
+{
+    UITableView *aTableView = [[[UITableView alloc] initWithFrame:TTScreenBounds() style:UITableViewStyleGrouped] autorelease];
+	aTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	aTableView.delegate = self;
+	aTableView.dataSource = self;
+	
+	self.view = aTableView;
+}  
+
 - (void)viewDidLoad 
 {
     [super viewDidLoad];
@@ -186,7 +196,6 @@
 {
 	ZBAlertWithMesage(NSLocalizedString(@"Failed to login!", @""), [error localizedDescription]);
 }
-
 
 @end
 

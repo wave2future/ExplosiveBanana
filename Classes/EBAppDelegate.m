@@ -5,8 +5,8 @@
 
 - (void)dealloc 
 {
-	[navigationController release];
-	[window release];
+//	[navigationController release];
+//	[window release];
 	[super dealloc];
 }
 
@@ -14,28 +14,25 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)showLoginView
-{
-	EBLoginViewController *loginViewController = [[EBLoginViewController alloc] initWithStyle:UITableViewStyleGrouped];
-	UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-	[loginViewController release];
-	[self.navigationController presentModalViewController:navController animated:YES];
-	[navController release];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	[ObjectivePlurk sharedInstance].APIKey = PLURK_API_KEY;
+
+	TTNavigator *navigator = [TTNavigator navigator];
+	navigator.supportsShakeToReload = YES;
+	navigator.persistenceMode = TTNavigatorPersistenceModeAll;
+	UIWindow *window = [[[UIWindow alloc] initWithFrame:TTScreenBounds()] autorelease];
+	window.backgroundColor = [UIColor blackColor];
+	navigator.window = window;
+
+	TTURLMap* map = navigator.URLMap;
+	[map from:@"*" toViewController:[TTWebController class]];
+	[map from:@"banana://login" toModalViewController:[EBLoginViewController class]];
+	[map from:@"banana://timeline" toModalViewController:[TTViewController class]];		
 	
-	self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
-	TTViewController *controller = [[TTViewController alloc] init];	
-	self.navigationController = [[[UINavigationController alloc] initWithRootViewController:controller] autorelease];
-	[controller release];
-    [window addSubview:navigationController.view];
-    [window makeKeyAndVisible];
-	
-	[self showLoginView];
-	
+	[navigator.window makeKeyAndVisible];
+	[navigator openURLs:@"banana://login", nil];
+
     return YES;
 }
 
@@ -65,8 +62,8 @@
 }
 
 
-@synthesize window;
-@synthesize navigationController;
+//@synthesize window;
+//@synthesize navigationController;
 
 
 @end
