@@ -31,8 +31,12 @@
 	
 	[navigator.window makeKeyAndVisible];
 
-	[navigator openURLs:@"banana://timeline", nil];
-	[navigator openURLs:@"banana://login", nil];
+	if (![[ObjectivePlurk sharedInstance] resume]) {	
+		[navigator openURLs:@"banana://login", nil];
+	}
+	else {
+		[navigator openURLs:@"banana://timeline", nil];
+	}
 
     return YES;
 }

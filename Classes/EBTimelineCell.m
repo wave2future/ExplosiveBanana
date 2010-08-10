@@ -13,6 +13,7 @@ static CGFloat kImageHeight = 40;
 	TT_RELEASE_SAFELY(imageView);
 	TT_RELEASE_SAFELY(userNameLabel);
 	TT_RELEASE_SAFELY(messageLabel);
+	TT_RELEASE_SAFELY(dateLabel);
 	[super dealloc];
 }
 
@@ -29,7 +30,11 @@ static CGFloat kImageHeight = 40;
 		messageLabel = [[TTStyledTextLabel alloc] initWithFrame:CGRectZero];
 		messageLabel.contentMode = UIViewContentModeLeft;
 		[self.contentView addSubview:messageLabel];
-		  self.accessoryType = UITableViewCellAccessoryNone;
+		dateLabel = [[TTStyledTextLabel alloc] initWithFrame:CGRectZero];
+		dateLabel.font = [UIFont systemFontOfSize:12.0];
+		dateLabel.textColor = [UIColor grayColor];
+		[self.contentView addSubview:dateLabel];
+		self.accessoryType = UITableViewCellAccessoryNone;
 	}  
 	return self;  
 }  
@@ -42,7 +47,7 @@ static CGFloat kImageHeight = 40;
 		text.font = TTSTYLEVAR(font);
 	}
 	text.width = tableView.bounds.size.width - kHPadding * 2 - kImageWidth - 10.0;
-	CGFloat h = text.height + 20.0;
+	CGFloat h = text.height + 50.0;
 	if (h < kImageHeight) {
 		h = kImageHeight;
 	}	
@@ -54,8 +59,8 @@ static CGFloat kImageHeight = 40;
 	[super layoutSubviews];
 	imageView.frame = CGRectMake(kHPadding, kVPadding, kImageWidth, kImageHeight);
 	userNameLabel.frame = CGRectMake(kHPadding + kImageWidth + 10.0 , kVPadding, self.bounds.size.width - kHPadding * 2 - kImageWidth - 10.0, 20.0);
-	messageLabel.frame = CGRectMake(kHPadding + kImageWidth + 10.0 , kVPadding + 20.0, self.bounds.size.width - kHPadding * 2 - kImageWidth - 10.0, self.bounds.size.height - 20.0 - kVPadding * 2);
-
+	messageLabel.frame = CGRectMake(kHPadding + kImageWidth + 10.0 , kVPadding + 30.0, self.bounds.size.width - kHPadding * 2 - kImageWidth - 10.0, self.bounds.size.height - 40.0 - kVPadding * 2);
+	dateLabel.frame = CGRectMake(kHPadding + kImageWidth + 10.0 , self.bounds.size.height - 13.0 - kVPadding, self.bounds.size.width - kHPadding * 2 - kImageWidth - 10.0, 15);
 }
 
 - (void)didMoveToSuperview 
@@ -65,6 +70,7 @@ static CGFloat kImageHeight = 40;
 		imageView.backgroundColor = self.backgroundColor;
 		userNameLabel.backgroundColor = self.backgroundColor;
 		messageLabel.backgroundColor = self.backgroundColor;
+		dateLabel.backgroundColor = self.backgroundColor;
 	}
 }
 
@@ -83,6 +89,7 @@ static CGFloat kImageHeight = 40;
     imageView.urlPath = timelineItem.avatarImageURL;
 	userNameLabel.text = [TTStyledText textFromXHTML:timelineItem.username];
 	messageLabel.text = [timelineItem styledMessage];
+	dateLabel.text = [TTStyledText textFromXHTML:timelineItem.dateString];
 }
 
 

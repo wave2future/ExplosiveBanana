@@ -2,10 +2,11 @@
 
 @implementation EBTimelineModel
 
-- (void) dealloc
+- (void)dealloc
 {
 	[users release];
 	[messages release];
+	[dateFormatter release];
 	[super dealloc];
 }
 
@@ -20,42 +21,71 @@
 	return self;
 }
 
+- (NSDate *)dateFromString:(NSString *)string
+{
+	//  "Tue, 10 Aug 2010 16:12:31 GMT";
+	if (!dateFormatter) {
+		dateFormatter = [[NSDateFormatter alloc] init];
+	}
+	[dateFormatter setLocale:[[[NSLocale alloc] initWithLocaleIdentifier:@"en"] autorelease]];
+	[dateFormatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss zzz"];
+	return [dateFormatter dateFromString:string];
+}
+
+- (NSString *)stringFromDate:(NSDate *)date
+{
+	if (!dateFormatter) {
+		dateFormatter = [[NSDateFormatter alloc] init];
+	}
+	[dateFormatter setLocale:[NSLocale currentLocale]];
+	[dateFormatter setDateStyle:kCFDateFormatterShortStyle];
+	[dateFormatter setTimeStyle:kCFDateFormatterShortStyle];
+	return [dateFormatter stringFromDate:date];
+}
+
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more 
 {
 	NSLog(@"%s", __PRETTY_FUNCTION__);
 	if (!self.isLoading) {
-		[users removeAllObjects];
-		[messages removeAllObjects];
-		[[ObjectivePlurk sharedInstance] retrieveMessagesWithDateOffset:nil limit:0 user:nil isResponded:NO isPrivate:NO delegate:self userInfo:nil];
-		[self didStartLoad];
-		loading = YES;
+		if (!more) {
+			[[ObjectivePlurk sharedInstance] retrieveMessagesWithDateOffset:nil limit:0 user:nil isResponded:NO isPrivate:NO delegate:self userInfo:nil];
+			[self didStartLoad];
+			loading = YES;
+		}
+		else {
+			NSDictionary *message = [messages lastObject];
+			NSString *posted = [message valueForKey:@"posted"]; 		
+			NSDate *date = [self dateFromString:posted];
+			[[ObjectivePlurk sharedInstance] retrieveMessagesWithDateOffset:date limit:0 user:nil isResponded:NO isPrivate:NO delegate:self userInfo:nil];
+			[self didStartLoad];
+			loading = YES;
+			loadingMore = YES;
+		}
 	}
-}
-
-- (BOOL)isLoaded
-{
-	return loaded;
-}
-- (BOOL)isLoading
-{
-	return loading;
 }
 
 - (void)plurk:(ObjectivePlurk *)plurk didRetrieveMessages:(NSDictionary *)result
 {
+	if (!loadingMore) {
+		[users removeAllObjects];
+		[messages removeAllObjects];
+	}
 	[users addEntriesFromDictionary:[result valueForKey:@"plurk_users"]];
 	[messages addObjectsFromArray:[result valueForKey:@"plurks"]];	
-	[self didFinishLoad];
 	loading = NO;
 	loaded = YES;
+	wasLoadingMore = loadingMore;
+	loadingMore = NO;
+	[self didFinishLoad];
 }
 - (void)plurk:(ObjectivePlurk *)plurk didFailRetrievingMessages:(NSError *)error
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
-	[self didFailLoadWithError:error];
+	NSLog(@"%s %@", __PRETTY_FUNCTION__, [error description]);
 	loading = NO;
 	loaded = YES;
+	loadingMore = NO;
+	[self didFailLoadWithError:error];
 }
 
 - (NSArray *)messageItems
@@ -76,13 +106,33 @@
 		NSString *html = [message valueForKey:@"content"];
 		
 		NSString *imageURL = [[ObjectivePlurk sharedInstance] imageURLStringForUser:ownerID size:OPMediumUserProfileImageSize hasProfileImage:hasProfileImage avatar:avatar];
-		NSString *posted = [message valueForKey:@"posted"]; //  "Tue, 10 Aug 2010 16:12:31 GMT";		
-		EBTimelineItem *item = [EBTimelineItem itemWithUsername:name avatarImageURL:imageURL date:nil message:html URL:nil];
+		NSString *posted = [message valueForKey:@"posted"]; 		
+		NSDate *date = [self dateFromString:posted];
+		NSString *dateString = [self stringFromDate:date];
+		EBTimelineItem *item = [EBTimelineItem itemWithUsername:name avatarImageURL:imageURL date:dateString message:html URL:nil];
 		[array addObject:item];
 	}
 	
+	TTTableMoreButton *moreButton = [TTTableMoreButton itemWithText:NSLocalizedString(@"More...", @"")];
+	[array addObject:moreButton];
+	
 	return array;
 }
+
+- (BOOL)isLoaded
+{
+	return loaded;
+}
+- (BOOL)isLoading
+{
+	return loading;
+}
+- (BOOL)isLoadingMore
+{
+	return loadingMore;
+}
+
+@synthesize wasLoadingMore;
 
 
 @end

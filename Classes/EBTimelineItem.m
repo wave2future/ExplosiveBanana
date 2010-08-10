@@ -6,19 +6,19 @@
 {
 	TT_RELEASE_SAFELY(username);
 	TT_RELEASE_SAFELY(avatarImageURL);
-	TT_RELEASE_SAFELY(date);
 	TT_RELEASE_SAFELY(message);
 	TT_RELEASE_SAFELY(URL);
+	TT_RELEASE_SAFELY(dateString);
 	[super dealloc];
 }
 
 
-+ (id)itemWithUsername:(NSString *)inUsername avatarImageURL:(NSString *)inAvatarImageURL date:(NSDate *)inDate message:(NSString *)inMessage URL:(NSString *)inURL;
++ (id)itemWithUsername:(NSString *)inUsername avatarImageURL:(NSString *)inAvatarImageURL date:(NSString *)inDateString message:(NSString *)inMessage URL:(NSString *)inURL;
 {
 	EBTimelineItem *item = [[EBTimelineItem alloc] init];
 	item.username = inUsername;
 	item.avatarImageURL = inAvatarImageURL;
-	item.date = inDate;
+	item.dateString = inDateString;
 	item.message = inMessage;
 	item.URL = inURL;
 	return [item autorelease];
@@ -30,22 +30,22 @@
 	if (self != nil) {
 		username = nil;
 		avatarImageURL = nil;
-		date = nil;
 		message = nil;
 		URL = nil;
+		dateString = nil;
 	}
 	return self;
 }
 
 - (TTStyledText *)styledMessage
 {
-	return [TTStyledText textFromXHTML:self.message];
+	return [TTStyledText textFromXHTML:self.message lineBreaks:YES URLs:YES];
 }
 
 @synthesize username;
 @synthesize avatarImageURL;
-@synthesize date;
 @synthesize message;
 @synthesize URL;
+@synthesize dateString;
 
 @end

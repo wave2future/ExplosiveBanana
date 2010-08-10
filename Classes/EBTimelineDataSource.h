@@ -3,8 +3,9 @@
 
 @interface EBTimelineDataSource : TTListDataSource 
 {
-	EBTimelineModel *timelineModel;
+	id timelineModel;
 }
 
+- (id)initWithModelClass:(Class)inClass;
 
 @end

@@ -6,7 +6,8 @@
 	
 	TTImageView *imageView;
 	TTStyledTextLabel *userNameLabel;
-	TTStyledTextLabel *messageLabel;	
+	TTStyledTextLabel *messageLabel;
+	TTStyledTextLabel *dateLabel;
 }
 
 @end

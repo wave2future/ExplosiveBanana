@@ -9,12 +9,11 @@
 	[super dealloc];
 }
 
-- (id)init
+- (id)initWithModelClass:(Class)inClass
 {
 	self = [super init];
 	if (self != nil) {
-		NSLog(@"init model");
-		timelineModel = [[EBTimelineModel alloc] init];
+		timelineModel = [[inClass alloc] init];
 	}
 	return self;
 }
@@ -24,9 +23,13 @@
 	return timelineModel;
 }
 
-- (void)tableViewDidLoadModel:(UITableView*)tableView 
+- (void)tableViewDidLoadModel:(UITableView *)tableView 
 {
-	self.items = [NSMutableArray arrayWithArray:timelineModel.messageItems];
+	EBTimelineModel *currentModel = (EBTimelineModel *)timelineModel;
+	self.items = [NSMutableArray arrayWithArray:currentModel.messageItems];
+	if ([self.items count] && !currentModel.wasLoadingMore) {
+		[tableView scrollRectToVisible:CGRectMake(0, 0, tableView.frame.size.width, 100) animated:YES];
+	}
 }
 
 - (NSString *)titleForLoading:(BOOL)reloading 
