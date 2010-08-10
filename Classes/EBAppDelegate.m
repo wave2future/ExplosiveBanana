@@ -1,12 +1,11 @@
 #import "EBAppDelegate.h"
 #import "EBLoginViewController.h"
+#import "EBTimelineViewController.h"
 
 @implementation EBAppDelegate
 
 - (void)dealloc 
 {
-//	[navigationController release];
-//	[window release];
 	[super dealloc];
 }
 
@@ -28,9 +27,11 @@
 	TTURLMap* map = navigator.URLMap;
 	[map from:@"*" toViewController:[TTWebController class]];
 	[map from:@"banana://login" toModalViewController:[EBLoginViewController class]];
-	[map from:@"banana://timeline" toModalViewController:[TTViewController class]];		
+	[map from:@"banana://timeline" toModalViewController:[EBTimelineViewController class]];		
 	
 	[navigator.window makeKeyAndVisible];
+
+	[navigator openURLs:@"banana://timeline", nil];
 	[navigator openURLs:@"banana://login", nil];
 
     return YES;

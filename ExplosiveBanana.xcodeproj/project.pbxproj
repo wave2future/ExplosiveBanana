@@ -14,6 +14,11 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		D4381AAB11E107100062FE45 /* EBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4381AAA11E107100062FE45 /* EBLoginViewController.m */; };
 		D4381B2D11E10F170062FE45 /* ZBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = D4381B2C11E10F170062FE45 /* ZBAlert.m */; };
+		D44E7EB81211C10C001B9DBC /* EBTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E7EB71211C10C001B9DBC /* EBTimelineViewController.m */; };
+		D44E7EC71211C14D001B9DBC /* EBTimelineItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E7EC61211C14D001B9DBC /* EBTimelineItem.m */; };
+		D44E7F061211C49C001B9DBC /* EBTimelineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E7F051211C49C001B9DBC /* EBTimelineCell.m */; };
+		D44E7F661211CD41001B9DBC /* EBTimelineDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E7F651211CD41001B9DBC /* EBTimelineDataSource.m */; };
+		D44E7F7E1211D1C7001B9DBC /* EBTimelineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E7F7D1211D1C7001B9DBC /* EBTimelineModel.m */; };
 		D478B81311DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */; };
 		D478B81411DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80C11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m */; };
 		D478B81511DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80E11DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m */; };
@@ -204,6 +209,16 @@
 		D4381B2B11E10F170062FE45 /* ZBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBAlert.h; path = ExternalLibraries/ZBExtensions/ZBAlert.h; sourceTree = "<group>"; };
 		D4381B2C11E10F170062FE45 /* ZBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZBAlert.m; path = ExternalLibraries/ZBExtensions/ZBAlert.m; sourceTree = "<group>"; };
 		D4381B2E11E10F3B0062FE45 /* ZBExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZBExtensions.h; path = ExternalLibraries/ZBExtensions/ZBExtensions.h; sourceTree = "<group>"; };
+		D44E7EB61211C10C001B9DBC /* EBTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTimelineViewController.h; sourceTree = "<group>"; };
+		D44E7EB71211C10C001B9DBC /* EBTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTimelineViewController.m; sourceTree = "<group>"; };
+		D44E7EC51211C14D001B9DBC /* EBTimelineItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTimelineItem.h; sourceTree = "<group>"; };
+		D44E7EC61211C14D001B9DBC /* EBTimelineItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTimelineItem.m; sourceTree = "<group>"; };
+		D44E7F041211C49C001B9DBC /* EBTimelineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTimelineCell.h; sourceTree = "<group>"; };
+		D44E7F051211C49C001B9DBC /* EBTimelineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTimelineCell.m; sourceTree = "<group>"; };
+		D44E7F641211CD41001B9DBC /* EBTimelineDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTimelineDataSource.h; sourceTree = "<group>"; };
+		D44E7F651211CD41001B9DBC /* EBTimelineDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTimelineDataSource.m; sourceTree = "<group>"; };
+		D44E7F7C1211D1C7001B9DBC /* EBTimelineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTimelineModel.h; sourceTree = "<group>"; };
+		D44E7F7D1211D1C7001B9DBC /* EBTimelineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTimelineModel.m; sourceTree = "<group>"; };
 		D478B80911DD2E3E000E85D1 /* NSArray+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+BSJSONAdditions.m"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		D478B80B11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSDictionary+BSJSONAdditions.h"; sourceTree = "<group>"; };
@@ -272,6 +287,7 @@
 				1D3623250D0F684500981E51 /* EBAppDelegate.m */,
 				D4381AA911E107100062FE45 /* EBLoginViewController.h */,
 				D4381AAA11E107100062FE45 /* EBLoginViewController.m */,
+				D44E7EC21211C13A001B9DBC /* Timeline */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -337,6 +353,23 @@
 				D4381B2C11E10F170062FE45 /* ZBAlert.m */,
 			);
 			name = ZBExtensions;
+			sourceTree = "<group>";
+		};
+		D44E7EC21211C13A001B9DBC /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				D44E7EB61211C10C001B9DBC /* EBTimelineViewController.h */,
+				D44E7EB71211C10C001B9DBC /* EBTimelineViewController.m */,
+				D44E7EC51211C14D001B9DBC /* EBTimelineItem.h */,
+				D44E7EC61211C14D001B9DBC /* EBTimelineItem.m */,
+				D44E7F041211C49C001B9DBC /* EBTimelineCell.h */,
+				D44E7F051211C49C001B9DBC /* EBTimelineCell.m */,
+				D44E7F641211CD41001B9DBC /* EBTimelineDataSource.h */,
+				D44E7F651211CD41001B9DBC /* EBTimelineDataSource.m */,
+				D44E7F7C1211D1C7001B9DBC /* EBTimelineModel.h */,
+				D44E7F7D1211D1C7001B9DBC /* EBTimelineModel.m */,
+			);
+			name = Timeline;
 			sourceTree = "<group>";
 		};
 		D478B7F911DD2E13000E85D1 /* External Libraries */ = {
@@ -674,6 +707,11 @@
 				D478B87D11DD2F59000E85D1 /* ObjectivePlurk+PrivateMethods.m in Sources */,
 				D4381AAB11E107100062FE45 /* EBLoginViewController.m in Sources */,
 				D4381B2D11E10F170062FE45 /* ZBAlert.m in Sources */,
+				D44E7EB81211C10C001B9DBC /* EBTimelineViewController.m in Sources */,
+				D44E7EC71211C14D001B9DBC /* EBTimelineItem.m in Sources */,
+				D44E7F061211C49C001B9DBC /* EBTimelineCell.m in Sources */,
+				D44E7F661211CD41001B9DBC /* EBTimelineDataSource.m in Sources */,
+				D44E7F7E1211D1C7001B9DBC /* EBTimelineModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
