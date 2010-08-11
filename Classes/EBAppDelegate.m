@@ -2,6 +2,7 @@
 #import "EBLoginViewController.h"
 #import "EBTimelineViewController.h"
 #import "EBMyPlurksViewController.h"
+#import "EBPrivatePlurksViewController.h"
 #import "EBTabbarController.h"
 
 @implementation EBAppDelegate
@@ -31,6 +32,7 @@
 	[map from:@"banana://login" toModalViewController:[EBLoginViewController class]];
 	[map from:@"banana://timeline" toViewController:[EBTimelineViewController class]];
 	[map from:@"banana://my" toViewController:[EBMyPlurksViewController class]];
+	[map from:@"banana://private" toViewController:[EBPrivatePlurksViewController class]];
 	[map from:@"banana://plurk" toViewController:[EBTabbarController class]];
 	
 	[navigator.window makeKeyAndVisible];

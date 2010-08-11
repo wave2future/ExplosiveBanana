@@ -8,7 +8,7 @@
 {
 	self = [super init];
 	if (self != nil) {
-		self.title = NSLocalizedString(@"My", @"");
+		self.title = NSLocalizedString(@"My Pluks", @"");
 	}
 	return self;
 }
