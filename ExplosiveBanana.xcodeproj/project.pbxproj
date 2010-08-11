@@ -24,6 +24,8 @@
 		D44E865212126599001B9DBC /* EBMyPlurksModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E865112126599001B9DBC /* EBMyPlurksModel.m */; };
 		D44E884A121283BE001B9DBC /* EBPrivatePlurksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E8849121283BE001B9DBC /* EBPrivatePlurksViewController.m */; };
 		D44E885312128402001B9DBC /* EBPrivatePlurksModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E885212128402001B9DBC /* EBPrivatePlurksModel.m */; };
+		D44E8876121286C2001B9DBC /* BERespondedPlurksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E8875121286C2001B9DBC /* BERespondedPlurksViewController.m */; };
+		D44E888012128716001B9DBC /* EBRespondedPlurksModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D44E887F12128716001B9DBC /* EBRespondedPlurksModel.m */; };
 		D478B81311DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */; };
 		D478B81411DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80C11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.m */; };
 		D478B81511DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D478B80E11DD2E3E000E85D1 /* NSScanner+BSJSONAdditions.m */; };
@@ -234,6 +236,10 @@
 		D44E8849121283BE001B9DBC /* EBPrivatePlurksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBPrivatePlurksViewController.m; sourceTree = "<group>"; };
 		D44E885112128402001B9DBC /* EBPrivatePlurksModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBPrivatePlurksModel.h; sourceTree = "<group>"; };
 		D44E885212128402001B9DBC /* EBPrivatePlurksModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBPrivatePlurksModel.m; sourceTree = "<group>"; };
+		D44E8874121286C2001B9DBC /* BERespondedPlurksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BERespondedPlurksViewController.h; sourceTree = "<group>"; };
+		D44E8875121286C2001B9DBC /* BERespondedPlurksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BERespondedPlurksViewController.m; sourceTree = "<group>"; };
+		D44E887E12128716001B9DBC /* EBRespondedPlurksModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBRespondedPlurksModel.h; sourceTree = "<group>"; };
+		D44E887F12128716001B9DBC /* EBRespondedPlurksModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBRespondedPlurksModel.m; sourceTree = "<group>"; };
 		D478B80911DD2E3E000E85D1 /* NSArray+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.h"; sourceTree = "<group>"; };
 		D478B80A11DD2E3E000E85D1 /* NSArray+BSJSONAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+BSJSONAdditions.m"; path = "ExternalLibraries/bsjsonadditions/NSArray+BSJSONAdditions.m"; sourceTree = "<group>"; };
 		D478B80B11DD2E3E000E85D1 /* NSDictionary+BSJSONAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSJSONAdditions.h"; path = "ExternalLibraries/bsjsonadditions/NSDictionary+BSJSONAdditions.h"; sourceTree = "<group>"; };
@@ -393,6 +399,10 @@
 				D44E8849121283BE001B9DBC /* EBPrivatePlurksViewController.m */,
 				D44E885112128402001B9DBC /* EBPrivatePlurksModel.h */,
 				D44E885212128402001B9DBC /* EBPrivatePlurksModel.m */,
+				D44E8874121286C2001B9DBC /* BERespondedPlurksViewController.h */,
+				D44E8875121286C2001B9DBC /* BERespondedPlurksViewController.m */,
+				D44E887E12128716001B9DBC /* EBRespondedPlurksModel.h */,
+				D44E887F12128716001B9DBC /* EBRespondedPlurksModel.m */,
 			);
 			name = Timeline;
 			sourceTree = "<group>";
@@ -742,6 +752,8 @@
 				D44E865212126599001B9DBC /* EBMyPlurksModel.m in Sources */,
 				D44E884A121283BE001B9DBC /* EBPrivatePlurksViewController.m in Sources */,
 				D44E885312128402001B9DBC /* EBPrivatePlurksModel.m in Sources */,
+				D44E8876121286C2001B9DBC /* BERespondedPlurksViewController.m in Sources */,
+				D44E888012128716001B9DBC /* EBRespondedPlurksModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

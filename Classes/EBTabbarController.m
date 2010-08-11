@@ -15,6 +15,7 @@
 	[self setTabURLs:[NSArray arrayWithObjects:@"banana://timeline",
 					  @"banana://my",
 					  @"banana://private",
+					  @"banana://responded",
 					  nil]];
 }
 

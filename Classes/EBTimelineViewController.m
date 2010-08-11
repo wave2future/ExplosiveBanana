@@ -17,9 +17,6 @@
 {
     [super loadView];    	
     self.variableHeightRows = YES;
-	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
-	self.navigationItem.leftBarButtonItem = item;	
-	[item release];	
 }  
 
 - (void)viewDidLoad
@@ -32,29 +29,9 @@
 	self.dataSource = [[[EBTimelineDataSource alloc] initWithModelClass:[EBTimelineModel class]] autorelease];
 }
 
-- (IBAction)reload:(id)sender
+- (id<UITableViewDelegate>)createDelegate 
 {
-	[self showLoading:YES];
-	[self reload];
+	return [[[TTTableViewDragRefreshDelegate alloc] initWithController:self] autorelease];
 }
-
-- (void)modelDidFinishLoad:(id<TTModel>)model
-{
-	if (model == _model) {
-		TT_RELEASE_SAFELY(_modelError);
-		_flags.isModelDidLoadInvalid = YES;
-		[self invalidateView];
-		[self showLoading:NO];
-	}
-}
-
-- (void)model:(id<TTModel>)model didFailLoadWithError:(NSError*)error 
-{
-	if (model == _model) {
-		self.modelError = error;
-		[self showLoading:NO];
-	}
-}
-
 
 @end
