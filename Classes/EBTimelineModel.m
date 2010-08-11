@@ -46,21 +46,20 @@
 
 - (void)load:(TTURLRequestCachePolicy)cachePolicy more:(BOOL)more 
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
 	if (!self.isLoading) {
 		if (!more) {
 			[[ObjectivePlurk sharedInstance] retrieveMessagesWithDateOffset:nil limit:0 user:nil isResponded:NO isPrivate:NO delegate:self userInfo:nil];
-			[self didStartLoad];
 			loading = YES;
+			[self didStartLoad];
 		}
 		else {
 			NSDictionary *message = [messages lastObject];
 			NSString *posted = [message valueForKey:@"posted"]; 		
 			NSDate *date = [self dateFromString:posted];
 			[[ObjectivePlurk sharedInstance] retrieveMessagesWithDateOffset:date limit:0 user:nil isResponded:NO isPrivate:NO delegate:self userInfo:nil];
-			[self didStartLoad];
 			loading = YES;
 			loadingMore = YES;
+			[self didStartLoad];
 		}
 	}
 }
@@ -81,7 +80,6 @@
 }
 - (void)plurk:(ObjectivePlurk *)plurk didFailRetrievingMessages:(NSError *)error
 {
-	NSLog(@"%s %@", __PRETTY_FUNCTION__, [error description]);
 	loading = NO;
 	loaded = YES;
 	loadingMore = NO;

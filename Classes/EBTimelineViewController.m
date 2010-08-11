@@ -4,12 +4,21 @@
 
 @implementation EBTimelineViewController
 
-- (void)loadView 
+- (id)init
+{
+	self = [super init];
+	if (self != nil) {
+		self.title = NSLocalizedString(@"All Plurks", @"");
+	}
+	return self;
+}
+
+- (void)loadView
 {
     [super loadView];    	
     self.variableHeightRows = YES;
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reload:)];
-	self.navigationItem.leftBarButtonItem = item;
+	self.navigationItem.leftBarButtonItem = item;	
 	[item release];	
 }  
 

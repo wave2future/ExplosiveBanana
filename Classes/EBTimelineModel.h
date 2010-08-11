@@ -12,6 +12,9 @@
 	BOOL wasLoadingMore;
 }
 
+- (NSDate *)dateFromString:(NSString *)string;
+- (NSString *)stringFromDate:(NSDate *)date;
+
 @property (readonly) NSArray *messageItems;
 @property (readonly) BOOL wasLoadingMore;
 

@@ -1,6 +1,8 @@
 #import "EBAppDelegate.h"
 #import "EBLoginViewController.h"
 #import "EBTimelineViewController.h"
+#import "EBMyPlurksViewController.h"
+#import "EBTabbarController.h"
 
 @implementation EBAppDelegate
 
@@ -27,15 +29,15 @@
 	TTURLMap* map = navigator.URLMap;
 	[map from:@"*" toViewController:[TTWebController class]];
 	[map from:@"banana://login" toModalViewController:[EBLoginViewController class]];
-	[map from:@"banana://timeline" toModalViewController:[EBTimelineViewController class]];		
+	[map from:@"banana://timeline" toViewController:[EBTimelineViewController class]];
+	[map from:@"banana://my" toViewController:[EBMyPlurksViewController class]];
+	[map from:@"banana://plurk" toViewController:[EBTabbarController class]];
 	
 	[navigator.window makeKeyAndVisible];
-
+	[navigator openURLs:@"banana://plurk", nil];
+	
 	if (![[ObjectivePlurk sharedInstance] resume]) {	
 		[navigator openURLs:@"banana://login", nil];
-	}
-	else {
-		[navigator openURLs:@"banana://timeline", nil];
 	}
 
     return YES;
