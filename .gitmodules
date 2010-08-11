@@ -7,6 +7,3 @@
 [submodule "ExternalLibraries/bsjsonadditions"]
 	path = ExternalLibraries/bsjsonadditions
 	url = http://github.com/blakeseely/bsjsonadditions.git
-[submodule "ExternalLibraries/Three20"]
-	path = ExternalLibraries/Three20
-	url = http://github.com/facebook/three20.git

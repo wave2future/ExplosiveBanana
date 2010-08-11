@@ -809,7 +809,9 @@
 				GCC_PREFIX_HEADER = ExplosiveBanana_Prefix.pch;
 				HEADER_SEARCH_PATHS = ExternalLibraries/Three20/Build/Products/three20;
 				INFOPLIST_FILE = "ExplosiveBanana-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
+					"-lstdc++",
 					"-all_load",
 					"-ObjC",
 				);
@@ -826,6 +828,7 @@
 				GCC_PREFIX_HEADER = ExplosiveBanana_Prefix.pch;
 				HEADER_SEARCH_PATHS = ExternalLibraries/Three20/Build/Products/three20;
 				INFOPLIST_FILE = "ExplosiveBanana-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
