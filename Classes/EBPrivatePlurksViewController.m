@@ -4,9 +4,9 @@
 
 @implementation EBPrivatePlurksViewController
 
-- (id)init
+- (id)initWithNavigatorURL:(NSURL *)URL query:(NSDictionary *)query
 {
-	self = [super init];
+	self = [super initWithStyle:UITableViewStylePlain];
 	if (self != nil) {
 		self.title = NSLocalizedString(@"Private", @"");
 	}
